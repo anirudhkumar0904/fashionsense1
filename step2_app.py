@@ -197,9 +197,14 @@ def detect_flags(text):
         "wapas kar","wapas bhej","vapas kar","vapas bhej","return kar",
         "vaapas","वापस","திரும்ப அனுப்","வாபஸ்",
     ]
-    for phrase in return_phrases:
-        if phrase in t:
-            return_intent = True
+    negations = ["don't want to return","dont want to return","do not want to return",
+                 "not returning","won't return","wont return","no need to return",
+                 "didn't return","didnt return","love it so much","will keep","so good i"]
+    is_negated = any(neg in t for neg in negations)
+    if not is_negated:
+        for phrase in return_phrases:
+            if phrase in t:
+                return_intent = True
 
     # ── DURABILITY / WASH FAILURE ────────────────────────────────────────────
     durability = False
