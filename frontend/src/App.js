@@ -5,8 +5,7 @@ import {
   BarChart, Bar, XAxis, YAxis, Cell, Tooltip,
 } from "recharts";
 
-const API = "http://localhost:8000";
-
+const API = "https://fashionsense-backend.onrender.com";
 /* ── Design tokens ──────────────────────────────────────────────────── */
 const T = {
   cream:      "#FAF6F0",
