@@ -1,4 +1,6 @@
-streamlit
+fastapi
+uvicorn
+boto3
+python-multipart
 pandas
 numpy
-plotly
